@@ -82,30 +82,6 @@ Put downloaded data into the following directory structure:
  python seq_transformation.py
 ~~~
 
-### UAV Data Processing
-
-#### Changes to statistics  
-+ **Annotations**  
-
-1. FileName: **P**000S00G10B10H10UC022000LC021000**A**000**R**0_08241716.txt  
-
-2. **P**000: (**P**ersonID) unique person ID for the main subject in current video
-
-3. **A**000: (**A**ction) action labels of current sample  
-
-4. **R**0: (**R**eplicate) replicate capturing  
-
-According to the organization form of UAV-human data set file name, change the person ID(**P**), the number of action repetition (**R**), action classification (**A**) and camera ID(**C**) in static data. Due to different collection methods of data sets, the default uav data is collected by a single camera, so the camera ids corresponding to all samples are set to 0.
-
-#### Changes to code 
-
-1. ```get_raw_skes_data.py``` Change the **ske_path** of the raw dataset, file extension, file name truncion method, and the size of the generated array used to store the coordinate information of the skeleton node in the current frame.
-
-2. ```get_raw_denoisded_data.py``` set **noise_len_thres** = 0, Changing action label truncion way and all the numbers in the code from 25 to 17, 75 to 51, and 150 to 102. 
-
-3. ```seq_transformation.py``` Classify the training and testing according to the https://github.com/SUTDCV/UAV-Human. 
- 
-
 #### Generate Data:
 
 + Generate UAV-Human dataset:
@@ -160,8 +136,6 @@ The pre-processed UAV data can be referred [here](https://drive.google.com/drive
     python ensemble.py --dataset ntu/xsub --joint-dir work_dir/ntu/csub/algcn --bone-dir work_dir/ntu/csub/algcn_bone --joint-motion-dir     work_dir/ntu120/csub/algcn_motion --bone-motion-dir work_dir/ntu/csub/algcn_bone_motion
 ~~~
 
-### Pretrained model
-pre-trained-model refer to the https://drive.google.com/file/d/15Ahneq5_IgurficrYb3PiiLeEFyS8lBQ/view?usp=share_link
     
 ## Acknowledgements
 This repo is based on [CTR-GCN](https://github.com/Uason-Chen/CTR-GCN). The data processing is borrowed from [SGN](https://github.com/microsoft/SGN) and [HCN](https://github.com/huguyuehuhu/HCN-pytorch).
