@@ -25,7 +25,7 @@ This repo is the official implementation for Auto-Learning-GCN: <u>Multivariate 
 + NTU RGB+D 60 Skeleton
 + NTU RGB+D 120 Skeleton
 + NW-UCLA
-+ U-Human
++ UAV-Human
 
 **NTU RGB+D 60 and 120**
 
