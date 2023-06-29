@@ -1,0 +1,18 @@
+python main.py --config config/nturgbd-cross-subject/default.yaml --model model.agcn.Model --work-dir work_dir/ntu/cs/agcn --device 0
+
+
+
+python ensemble-gauss-c1-6.py --dataset ntu/xsub --joint-dir work_dir/uav-cs1/maskgcn-5-uav1-k6-wd5-lr2-bz128-45.05/ --bone-dir work_dir/uav-cs1/maskgcn-5-uav-k1-wd5-lr2-bz128-45.05/ --joint-motion-dir work_dir/uav-cs1/maskgcn-5-uav1-k6-m-wd5-lr2-bz128-37.15/ --bone-motion-dir work_dir/uav-cs1/maskgcn-5-uav-k1-m-37.75/ --joint-k2-dir work_dir/uav-cs1/maskgcn-5-uav-k2-wd4-lr2-bz128-44.38/ --joint-motion-k2-dir work_dir/uav-cs1/maskgcn-5-uav-k2-m-wd5-lr2-35.00/
+
+
+3s 47.8
+4s 48.6
+6s 48.8
+
+python ensemble-gauss-c2-6.py --dataset ntu/xsub --joint-dir work_dir/uav-cs2/maskgcn-5-uav-k6-69.43/ --bone-dir work_dir/uav-cs2/maskgcn-5-uav-k1-69/ --joint-motion-dir work_dir/uav-cs2/maskgcn-5-uav-k6-m-59.30/ --bone-motion-dir work_dir/uav-cs2/maskgcn-5-uav-k1-m-59.48/ --joint-k2-dir work_dir/uav-cs2/maskgcn-5-uav-k2-68.56/ --joint-motion-k2-dir work_dir/uav-cs2/maskgcn-5-uav-k2-m-56.43/
+
+
+
+3s 72.6
+4s 73.5
+6s 74.0
