@@ -1,7 +1,7 @@
 # Auto-Learning-GCN
 This repo is the official implementation for Auto-Learning-GCN: <u>Multivariate Topology Representation for Skeleton-based Action Recognition<u>
 
-## Architecture of SK-MixF
+## Architecture of AL-GCN
 
 
 
